@@ -21,8 +21,17 @@ private Button fries,brgr,pizza,drink;
         pizza.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(),pizza.class);
-                startActivity(intent);
+                Intent pizza = new Intent(getApplicationContext(),pizza.class);
+                startActivity(pizza);
+            }
+        });
+
+        brgr = (Button)findViewById(R.id.burgerbtn);
+        brgr.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent burger = new Intent(getApplicationContext(),burger.class);
+                startActivity(burger);
             }
         });
 
