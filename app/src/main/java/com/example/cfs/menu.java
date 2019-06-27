@@ -47,5 +47,21 @@ private Button fries,brgr,pizza,drink;
             }
 
         });
+        fries = (Button)findViewById(R.id.friesbtn);
+        fries.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(),fries.class);
+                startActivity(intent);
+            }
+        });
+        drink = (Button)findViewById(R.id.colabtn);
+        drink.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), drinks.class);
+                startActivity(intent);
+            }
+        });
     }
 }

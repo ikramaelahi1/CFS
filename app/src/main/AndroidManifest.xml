@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".burger"></activity>
+        <activity android:name=".drinks"></activity>
+        <activity android:name=".fries" />
+        <activity android:name=".burger" />
         <activity android:name=".pizza" />
         <activity android:name=".regForm" />
         <activity android:name=".menu" />

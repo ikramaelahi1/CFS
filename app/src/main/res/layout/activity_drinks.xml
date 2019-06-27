@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".burger"
-    android:background="#F3F3F3">
+    tools:context=".drinks">
 
     <ImageView
         android:id="@+id/img"
@@ -23,12 +22,12 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.100"
-        app:srcCompat="@drawable/burger" />
+        app:srcCompat="@drawable/cola" />
 
     <TextView
         android:id="@+id/textView3"
-        android:layout_width="220dp"
-        android:layout_height="60dp"
+        android:layout_width="373dp"
+        android:layout_height="67dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
@@ -37,7 +36,7 @@
         android:layout_marginBottom="8dp"
         android:fontFamily="serif"
         android:gravity="center"
-        android:text="BURGER"
+        android:text="Cold Drinks"
         android:textAlignment="center"
         android:textColor="#000"
         android:textSize="50dp"
@@ -50,7 +49,7 @@
         app:layout_constraintVertical_bias="0.065" />
 
     <Button
-        android:id="@+id/chicken"
+        android:id="@+id/sprite"
         android:layout_width="185dp"
         android:layout_height="60dp"
         android:layout_marginStart="8dp"
@@ -59,7 +58,7 @@
         android:layout_marginBottom="8dp"
         android:background="@drawable/buttons"
         android:fontFamily="serif"
-        android:text="Chicken Burger"
+        android:text="Sprite"
         android:textAlignment="center"
         android:textColor="#000"
         android:textSize="18dp"
@@ -72,7 +71,7 @@
         app:layout_constraintVertical_bias="0.586" />
 
     <Button
-        android:id="@+id/zinger"
+        android:id="@+id/pepsi"
         android:layout_width="185dp"
         android:layout_height="60dp"
         android:layout_marginStart="8dp"
@@ -83,7 +82,7 @@
         android:layout_marginBottom="8dp"
         android:background="@drawable/buttons"
         android:fontFamily="serif"
-        android:text="Zinger Burger"
+        android:text="Pepsi"
         android:textAlignment="center"
         android:textColor="#000"
         android:textSize="18dp"
@@ -96,7 +95,7 @@
         app:layout_constraintVertical_bias="0.586" />
 
     <Button
-        android:id="@+id/beef"
+        android:id="@+id/coca"
         android:layout_width="185dp"
         android:layout_height="60dp"
         android:layout_marginStart="8dp"
@@ -107,7 +106,7 @@
         android:layout_marginBottom="8dp"
         android:background="@drawable/buttons"
         android:fontFamily="serif"
-        android:text="Beef Burger"
+        android:text="Coca Cola"
         android:textAlignment="center"
         android:textColor="#000"
         android:textSize="18dp"
@@ -116,11 +115,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.038"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/chicken"
+        app:layout_constraintTop_toBottomOf="@+id/sprite"
         app:layout_constraintVertical_bias="0.216" />
 
     <Button
-        android:id="@+id/spicy"
+        android:id="@+id/sting"
         android:layout_width="185dp"
         android:layout_height="60dp"
         android:layout_marginStart="8dp"
@@ -131,7 +130,7 @@
         android:layout_marginBottom="8dp"
         android:background="@drawable/buttons"
         android:fontFamily="serif"
-        android:text="Spicy Burger"
+        android:text="Sting"
         android:textAlignment="center"
         android:textColor="#000"
         android:textSize="18dp"
@@ -139,12 +138,12 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/button5"
-        app:layout_constraintTop_toBottomOf="@+id/zinger"
+        app:layout_constraintStart_toEndOf="@+id/coca"
+        app:layout_constraintTop_toBottomOf="@+id/pepsi"
         app:layout_constraintVertical_bias="0.214" />
 
     <Button
-        android:id="@+id/egg"
+        android:id="@+id/marinda"
         android:layout_width="185dp"
         android:layout_height="60dp"
         android:layout_marginStart="8dp"
@@ -155,7 +154,7 @@
         android:layout_marginBottom="8dp"
         android:background="@drawable/buttons"
         android:fontFamily="serif"
-        android:text="Egg Burger"
+        android:text="Marinda"
         android:textAlignment="center"
         android:textColor="#000"
         android:textSize="18dp"
@@ -164,11 +163,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.038"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/beef"
+        app:layout_constraintTop_toBottomOf="@+id/coca"
         app:layout_constraintVertical_bias="0.461" />
 
     <Button
-        android:id="@+id/special"
+        android:id="@+id/up"
         android:layout_width="185dp"
         android:layout_height="60dp"
         android:layout_marginStart="8dp"
@@ -179,7 +178,7 @@
         android:layout_marginBottom="8dp"
         android:background="@drawable/buttons"
         android:fontFamily="serif"
-        android:text="Special Burger"
+        android:text="7up"
         android:textAlignment="center"
         android:textColor="#000"
         android:textSize="18dp"
@@ -187,7 +186,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/egg"
-        app:layout_constraintTop_toBottomOf="@+id/spicy"
+        app:layout_constraintStart_toEndOf="@+id/marinda"
+        app:layout_constraintTop_toBottomOf="@+id/sting"
         app:layout_constraintVertical_bias="0.461" />
 </android.support.constraint.ConstraintLayout>

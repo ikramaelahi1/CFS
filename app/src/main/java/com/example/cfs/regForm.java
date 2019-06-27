@@ -16,6 +16,7 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class regForm extends AppCompatActivity {
     private FirebaseAuth firebaseAuth;
+    EditText cpass;
     private Button b1;
     private EditText name , password;
     @Override
@@ -26,7 +27,7 @@ public class regForm extends AppCompatActivity {
         b1 = (Button)findViewById(R.id.submit);
         name = (EditText)findViewById(R.id.email);
         password = (EditText)findViewById(R.id.createPass);
-
+        cpass=(EditText)findViewById(R.id.createPass);
 
 
         b1.setOnClickListener(new View.OnClickListener() {
@@ -34,26 +35,26 @@ public class regForm extends AppCompatActivity {
             public void onClick(View v) {
                 String namefield = name.getText().toString().trim();
                 String passfield = password.getText().toString().trim();
-                firebaseAuth.createUserWithEmailAndPassword(namefield,passfield).addOnCompleteListener(regForm.this, new OnCompleteListener<AuthResult>() {
+                firebaseAuth.createUserWithEmailAndPassword(namefield, passfield).addOnCompleteListener(regForm.this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
-                        if(task.isSuccessful())
-                        {
+                        if (task.isSuccessful()) {
                             Toast.makeText(regForm.this, "data saved to Firebase...", Toast.LENGTH_SHORT).show();
-                            Intent i = new Intent(regForm.this,MainActivity.class);
+                            Intent i = new Intent(regForm.this, MainActivity.class);
                             startActivity(i);
                             finish();
-                        }
-                        else
-                        {
+                        } else {
                             Toast.makeText(regForm.this, "Error", Toast.LENGTH_SHORT).show();
                         }
 
                     }
                 });
 
-            }
+
+                }
         });
+
+        }
     }
 
-}
+
