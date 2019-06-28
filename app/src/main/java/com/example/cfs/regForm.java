@@ -13,6 +13,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class regForm extends AppCompatActivity {
     private FirebaseAuth firebaseAuth;
@@ -39,9 +40,7 @@ public class regForm extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-                            Toast.makeText(regForm.this, "data saved to Firebase...", Toast.LENGTH_SHORT).show();
-                            Intent i = new Intent(regForm.this, MainActivity.class);
-                            startActivity(i);
+                            sendEmailVerificationMessage();
                             finish();
                         } else {
                             Toast.makeText(regForm.this, "Error", Toast.LENGTH_SHORT).show();
@@ -55,6 +54,29 @@ public class regForm extends AppCompatActivity {
         });
 
         }
+    private void sendEmailVerificationMessage(){
+        FirebaseUser user = firebaseAuth.getCurrentUser();
+        if(user != null){
+            user.sendEmailVerification().addOnCompleteListener(new OnCompleteListener<Void>() {
+                @Override
+                public void onComplete(@NonNull Task<Void> task) {
+                    if(task.isSuccessful()){
+                        Toast.makeText(regForm.this, "Registration Successfull: Now check and verify your account.", Toast.LENGTH_SHORT).show();
+                        sendToLoginActivity();
+                        firebaseAuth.signOut();
+                    }else{
+                        String error = task.getException().getMessage();
+                        Toast.makeText(regForm.this, "ERROR: "+error, Toast.LENGTH_SHORT).show();
+                        firebaseAuth.signOut();
+                    }
+                }
+            });
+        }
+    }
+    private void sendToLoginActivity(){
+        Intent intent = new Intent(getApplicationContext(),MainActivity.class);
+        startActivity(intent);
+    }
     }
 
 
