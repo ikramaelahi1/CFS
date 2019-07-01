@@ -73,15 +73,15 @@
             android:layout_marginTop="8dp"
             app:layout_constraintTop_toBottomOf="@+id/password"
             app:layout_constraintVertical_bias="0.209"/>
-    <TextView
+    <Button
             android:gravity="center"
-            android:text="Register Account?"
+            android:text="Forgot Password.?"
             android:layout_width="168dp"
-            android:layout_height="39dp"
-            android:id="@+id/register"
+            android:layout_height="60dp"
+            android:id="@+id/forgotPassword"
             android:textColor="#000"
             android:textStyle="italic"
-            android:textSize="20dp"
+            android:textSize="15dp"
             android:textAlignment="center"
             app:layout_constraintTop_toBottomOf="@+id/login"
             android:layout_marginBottom="8dp"

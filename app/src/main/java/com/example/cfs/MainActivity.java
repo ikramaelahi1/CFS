@@ -18,7 +18,7 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity extends AppCompatActivity {
    public EditText ed1,ed2;
-    Button b1,b2;
+    Button b1,b2,b3;
     TextView tx1;
     private FirebaseAuth firebaseAuth;
 
@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         ed2 = (EditText)findViewById(R.id.password);
         b1= (Button)findViewById(R.id.login);
         b2= (Button)findViewById(R.id.registration);
-        tx1 = (TextView)findViewById(R.id.register);
+        b3 = (Button)findViewById(R.id.forgotPassword);
         //{ID's}
         firebaseAuth= FirebaseAuth.getInstance();
 
@@ -68,6 +68,13 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this, "Redirected to Form...", Toast.LENGTH_SHORT).show();
                 Intent inten = new Intent(getApplicationContext(),regForm.class);
                 startActivity(inten);
+            }
+        });
+        b3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, resetPassword.class);
+                startActivity(intent);
             }
         });
 
